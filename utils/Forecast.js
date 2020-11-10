@@ -13,7 +13,7 @@ const forecast = (address) => {
         reject({error: "Could not find location, try again"} );
       } else {
         resolve({
-          temperature: ` It is currently ${response.body.current.temperature} degrees celsius and ${response.body.current.weather_descriptions}`,
+          temperature: ` It is currently ${response.body.current.temperature} degrees celsius and ${response.body.current.weather_descriptions} in ${address}`,
         });
       }
     });
